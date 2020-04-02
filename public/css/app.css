@@ -3,6 +3,7 @@ body {
     color: #757575;
     font-family: 'Consolas', Arial, Helvetica, sans-serif;
     margin: 0;
+    padding: 1em;
 }
 
 ul {
@@ -22,14 +23,14 @@ button {
     min-width: 64px;
     padding: 0 16px;
     display: inline-block;
-    font-family: "Consolas", "Helvetica", "Arial", sans-serif;
+    font-family: "Consolas","Helvetica","Arial",sans-serif;
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0;
     overflow: hidden;
     will-change: box-shadow;
-    transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
     outline: none;
     cursor: pointer;
     text-decoration: none;
@@ -39,11 +40,11 @@ button {
 }
 
 button:hover {
-    background-color: rgba(158, 158, 158, .2);
+    background-color: rgba(158,158,158,.2);
 }
 
 button:active {
-    background-color: rgba(158, 158, 158, .4);
+    background-color: rgba(158,158,158,.4);
 }
 
 button.icon {
@@ -63,7 +64,7 @@ button .material-icons {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-12px, -12px);
+    transform: translate(-12px,-12px);
     line-height: 24px;
     width: 24px;
     vertical-align: middle;
@@ -81,11 +82,11 @@ input {
 
 main {
     background: #fff;
-    width: 700px;
+    max-width: 700px;
     margin: 70px auto;
     border-radius: 2px;
     overflow: hidden;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 header {
@@ -110,7 +111,7 @@ header h1 {
 .todo-item {
     display: flex;
     font-size: 1rem;
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-top: 1px solid rgba(0,0,0,.1);
     background-color: #fff;
     transition: all .2s;
     -webkit-user-select: none;
@@ -132,20 +133,23 @@ header h1 {
     margin-right: auto;
 }
 
+.todo-item .textfield {
+    display: none;
+}
+
 .todo-item.completed .title {
     text-decoration: line-through;
 }
 
+.todo-item.editing .checkbox,
 .todo-item.editing .title {
-    display: none;
-}
-
-.todo-item .textfield {
     display: none;
 }
 
 .todo-item.editing .textfield {
     display: block;
+    flex: 1;
+    margin-right: 16px;
 }
 
 .todo-item button {
@@ -164,7 +168,7 @@ header h1 {
 #todo-form {
     display: flex;
     background-color: #FAFAFA;
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-top: 1px solid rgba(0,0,0,.1);
     padding: 10px;
 }
 
